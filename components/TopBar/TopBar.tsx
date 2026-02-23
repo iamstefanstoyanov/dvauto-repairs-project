@@ -1,12 +1,11 @@
-import { Facebook } from "@/components/ui/Icons/Facebook";
-import { Instagram } from "@/components/ui/Icons/Instagram";
-import { Mail } from "@/components/ui/Icons/Mail";
-import { Phone } from "@/components/ui/Icons/Phone";
+import Facebook from "@/components/ui/Icons/Facebook";
+import Instagram from "@/components/ui/Icons/Instagram";
+import Mail from "@/components/ui/Icons/Mail";
+import Phone from "@/components/ui/Icons/Phone";
 import { siteConfig } from "@/config/site";
 
-export function TopBar() {
-  return (
-    <div className="hidden bg-gray-900 px-5 py-2 text-sm text-white lg:block">
+const TopBar = () => (
+  <div className="hidden bg-gray-900 px-5 py-2 text-sm text-white lg:block">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-4">
           <a
@@ -34,5 +33,6 @@ export function TopBar() {
         </div>
       </div>
     </div>
-  );
-}
+);
+
+export default TopBar;

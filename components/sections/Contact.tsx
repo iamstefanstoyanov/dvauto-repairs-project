@@ -1,13 +1,13 @@
 "use client";
 
-import { Briefcase } from "@/components/ui/Icons/Briefcase";
-import { Calendar } from "@/components/ui/Icons/Calendar";
-import { Phone } from "@/components/ui/Icons/Phone";
+import Briefcase from "@/components/ui/Icons/Briefcase";
+import Calendar from "@/components/ui/Icons/Calendar";
+import Phone from "@/components/ui/Icons/Phone";
 import { siteConfig } from "@/config/site";
 import { useTranslation } from "@/hooks/useTranslation";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import SectionTitle from "@/components/ui/SectionTitle";
 
-export function Contact() {
+const Contact = () => {
   const t = useTranslation();
 
   return (
@@ -83,4 +83,5 @@ export function Contact() {
       </div>
     </section>
   );
-}
+};
+export default Contact;

@@ -1,6 +1,7 @@
 "use client";
 
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import MobileMenu from "@/components/MobileMenu/MobileMenu";
 import { useDevice } from "@/hooks/useDevice";
 import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
@@ -14,7 +15,7 @@ const NAV_KEYS = [
   { key: "contact", sectionId: "contact" },
 ] as const;
 
-export function Header() {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useDevice();
   const t = useTranslation();
@@ -84,18 +85,13 @@ export function Header() {
       </div>
 
       {isMobile && mobileMenuOpen && (
-        <nav className="absolute left-0 top-full w-full border border-gray-300 bg-white p-5 shadow-md">
-          {NAV_KEYS.map((item) => (
-            <button
-              key={item.sectionId}
-              onClick={() => scrollToSection(item.sectionId)}
-              className="block w-full py-2 text-left text-sm font-medium transition-colors hover:text-gray-600"
-            >
-              {t.nav[item.key]}
-            </button>
-          ))}
-        </nav>
+        <MobileMenu
+          translations={t.nav}
+          onNavigate={scrollToSection}
+        />
       )}
     </header>
   );
-}
+};
+
+export default Header;

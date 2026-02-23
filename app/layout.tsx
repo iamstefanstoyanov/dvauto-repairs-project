@@ -1,6 +1,6 @@
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { TopBar } from "@/components/layout/TopBar";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import TopBar from "@/components/TopBar/TopBar";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "@/styles/globals.css";
 import type { Metadata } from "next";

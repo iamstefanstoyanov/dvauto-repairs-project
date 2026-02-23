@@ -1,10 +1,10 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { BgFlag } from "./Icons/BgFlag";
-import { UkFlag } from "./Icons/UkFlag";
+import BgFlag from "./Icons/BgFlag";
+import UkFlag from "./Icons/UkFlag";
 
-export function LanguageSwitcher() {
+const LanguageSwitcher = () => {
   const { language, toggleLanguage } = useLanguage();
 
   return (
@@ -21,4 +21,6 @@ export function LanguageSwitcher() {
       {language === "en" ? "BG" : "EN"}
     </button>
   );
-}
+};
+
+export default LanguageSwitcher;

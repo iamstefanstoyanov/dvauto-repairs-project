@@ -2,9 +2,9 @@
 
 import { siteConfig } from "@/config/site";
 import { useTranslation } from "@/hooks/useTranslation";
-import { Phone } from "../ui/Icons/Phone";
+import Phone from "../ui/Icons/Phone";
 
-export function Home() {
+const Home = () => {
   const t = useTranslation();
 
   return (
@@ -36,4 +36,5 @@ export function Home() {
       </div>
     </section>
   );
-}
+};
+export default Home;

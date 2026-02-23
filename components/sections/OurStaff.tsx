@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import SectionTitle from "@/components/ui/SectionTitle";
 
-export function OurStaff() {
+const OurStaff = () => {
   const t = useTranslation();
 
   return (
@@ -16,4 +16,5 @@ export function OurStaff() {
       </div>
     </section>
   );
-}
+};
+export default OurStaff;

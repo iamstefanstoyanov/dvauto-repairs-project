@@ -3,7 +3,7 @@ interface SectionTitleProps {
   subtitle?: string;
 }
 
-export function SectionTitle({ title, subtitle }: SectionTitleProps) {
+const SectionTitle = ({ title, subtitle }: SectionTitleProps) => {
   return (
     <div className="mb-10 text-center">
       <h2 className="text-2xl font-extrabold uppercase tracking-widest text-gray-900 md:text-3xl">
@@ -17,4 +17,6 @@ export function SectionTitle({ title, subtitle }: SectionTitleProps) {
       )}
     </div>
   );
-}
+};
+
+export default SectionTitle;

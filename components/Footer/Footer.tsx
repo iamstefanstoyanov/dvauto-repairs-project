@@ -1,13 +1,13 @@
 "use client";
 
-import { Facebook } from "@/components/ui/Icons/Facebook";
-import { Instagram } from "@/components/ui/Icons/Instagram";
-import { Mail } from "@/components/ui/Icons/Mail";
-import { Phone } from "@/components/ui/Icons/Phone";
+import Facebook from "@/components/ui/Icons/Facebook";
+import Instagram from "@/components/ui/Icons/Instagram";
+import Mail from "@/components/ui/Icons/Mail";
+import Phone from "@/components/ui/Icons/Phone";
 import { siteConfig } from "@/config/site";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export function Footer() {
+const Footer = () => {
   const t = useTranslation();
 
   return (
@@ -104,4 +104,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

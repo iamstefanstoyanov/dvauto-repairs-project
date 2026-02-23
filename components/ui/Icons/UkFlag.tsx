@@ -1,4 +1,4 @@
-export function UkFlag({ className }: { className?: string }) {
+const UkFlag = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,4 +26,6 @@ export function UkFlag({ className }: { className?: string }) {
       </g>
     </svg>
   );
-}
+};
+
+export default UkFlag;

@@ -1,8 +1,8 @@
-import { Home } from "@/components/sections/Home";
-import { WhatWeDo } from "@/components/sections/WhatWeDo";
-import { Services } from "@/components/sections/Services";
-import { OurStaff } from "@/components/sections/OurStaff";
-import { Contact } from "@/components/sections/Contact";
+import Home from "@/components/sections/Home";
+import WhatWeDo from "@/components/sections/WhatWeDo";
+import Services from "@/components/sections/Services";
+import OurStaff from "@/components/sections/OurStaff";
+import Contact from "@/components/sections/Contact";
 import { ComponentType } from "react";
 
 const SECTIONS: ComponentType[] = [Home, WhatWeDo, Services, OurStaff, Contact];
