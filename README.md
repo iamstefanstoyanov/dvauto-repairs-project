@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DVMI LTD — Auto Repair Shop Website
+
+A responsive single-page application built for a professional car and van repair garage.
+Designed with a mobile-first approach, clean UI, and optimized performance to effectively showcase services, business information, and customer contact options.
+
+## Live Demo
+
+> **Still in development** — live URL coming soon.
+
+## Features
+
+- Fully responsive, mobile-first design with device detection
+- Smooth single-page scroll navigation with dynamic sticky header offset
+- Bilingual support (English / Bulgarian) with a built-in language switcher
+- Type-safe i18n using plain TypeScript — no external translation libraries
+- SEO-ready: structured metadata, Open Graph tags, `robots.txt`, and `sitemap.xml`
+- Security hardened with custom HTTP headers (HSTS, X-Frame-Options, CSP, etc.)
+- Custom SVG icon system — lightweight, no icon-library dependencies
+- Hybrid rendering: Server Components for static content, Client Components for interactivity
+- Background parallax effect with semi-transparent section overlays
+
+## Tech Stack
+
+| Layer       | Technology                    |
+| ----------- | ----------------------------- |
+| Framework   | Next.js 16 (App Router)       |
+| Language    | TypeScript                    |
+| UI          | React 19                      |
+| Styling     | Tailwind CSS 4                |
+| Linting     | ESLint with eslint-config-next|
+| Deployment  | Vercel (planned)              |
+
+## Project Structure
+
+```
+app/                  # Next.js App Router pages and root layout
+components/
+  Header/             # Sticky navigation header
+  Footer/             # Multi-column footer with services & contact
+  TopBar/             # Top info bar (email, phone, social links)
+  MobileMenu/         # Mobile slide-down navigation
+  Sections/           # Page sections (Home, WhatWeDo, Services, OurStaff, Contact)
+  ui/                 # Reusable UI components (SectionTitle, LanguageSwitcher)
+    Icons/            # Custom SVG icon components
+config/               # Site-wide configuration (contact details, social links)
+context/              # React Context providers (LanguageContext)
+hooks/                # Custom hooks (useDevice, useTranslation)
+i18n/                 # Translation strings (EN & BG)
+styles/               # Global CSS
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app is optimized for deployment on Vercel or any Node.js-compatible hosting platform.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
