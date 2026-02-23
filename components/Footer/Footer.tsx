@@ -5,7 +5,17 @@ import Instagram from "@/components/ui/Icons/Instagram";
 import Mail from "@/components/ui/Icons/Mail";
 import Phone from "@/components/ui/Icons/Phone";
 import { siteConfig } from "@/config/site";
-import { useTranslation } from "@/hooks/useTranslation";
+import useTranslation from "@/hooks/useTranslation";
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const stickyHeader = document.querySelector("[data-sticky-header]");
+    const offset = stickyHeader?.getBoundingClientRect().height ?? 0;
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
 
 const Footer = () => {
   const t = useTranslation();
@@ -22,7 +32,7 @@ const Footer = () => {
                 href={siteConfig.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="hover:text-white cursor-pointer"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -75,10 +85,8 @@ const Footer = () => {
               {t.footer.services.map((service) => (
                 <li key={service}>
                   <button
-                    onClick={() => {
-                      document.getElementById("what-we-do")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="hover:text-white"
+                    onClick={() => scrollToSection("what-we-do")}
+                    className="hover:text-white cursor-pointer"
                   >
                     {service}
                   </button>

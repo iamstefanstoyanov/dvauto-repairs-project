@@ -5,15 +5,21 @@ import Services from "@/components/Sections/Services";
 import WhatWeDo from "@/components/Sections/WhatWeDo";
 import { ComponentType } from "react";
 
-const SECTIONS: ComponentType[] = [Home, WhatWeDo, Services, OurStaff, Contact];
+const SECTIONS: { id: string; Component: ComponentType }[] = [
+  { id: "section-home", Component: Home },
+  { id: "section-what-we-do", Component: WhatWeDo },
+  { id: "section-services", Component: Services },
+  { id: "section-our-staff", Component: OurStaff },
+  { id: "section-contact", Component: Contact },
+];
 
 export default function Page() {
   return (
-    <main className="relative bg-[url('/garage-background.webp')] bg-fixed bg-cover bg-center bg-no-repeat">
+    <main className="relative bg-[url('/garage-background.webp')] bg-cover bg-center bg-no-repeat bg-fixed md:bg-fixed">
       <div className="pointer-events-none absolute inset-0 bg-white/75" />
       <div className="relative">
-        {SECTIONS.map((Section, i) => (
-          <Section key={i} />
+        {SECTIONS.map(({ id, Component }) => (
+          <Component key={id} />
         ))}
       </div>
     </main>

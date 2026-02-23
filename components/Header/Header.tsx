@@ -2,8 +2,8 @@
 
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher/LanguageSwitcher";
 import MobileMenu from "@/components/ui/MobileMenu/MobileMenu";
-import { useDevice } from "@/hooks/useDevice";
-import { useTranslation } from "@/hooks/useTranslation";
+import useDevice from "@/hooks/useDevice";
+import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import { useCallback, useState } from "react";
 
@@ -17,7 +17,7 @@ const NAV_KEYS = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isMobile } = useDevice();
+  const { isMobile, isHydrated } = useDevice();
   const t = useTranslation();
 
   const scrollToSection = useCallback((sectionId: string) => {
@@ -38,7 +38,7 @@ const Header = () => {
           <Image src="/logo.png" alt={t.brand} width={90} height={60} priority />
         </button>
 
-        {!isMobile && (
+        {isHydrated && !isMobile && (
           <nav className="flex items-center gap-6">
             {NAV_KEYS.map((item) => (
               <button
@@ -55,7 +55,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
 
-          {isMobile && (
+          {isHydrated && isMobile && (
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               className="flex flex-col gap-1.5 p-1"
@@ -76,7 +76,7 @@ const Header = () => {
         </div>
       </div>
 
-      {isMobile && mobileMenuOpen && (
+      {isHydrated && isMobile && mobileMenuOpen && (
         <MobileMenu translations={t.nav} onNavigate={scrollToSection} />
       )}
     </header>

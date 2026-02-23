@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import { useTranslation } from "@/hooks/useTranslation";
+import useTranslation from "@/hooks/useTranslation";
 import Phone from "../ui/Icons/Phone";
 
 const Home = () => {

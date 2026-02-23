@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    // TODO: uncomment and set your domain when going live
-    // sitemap: "https://yourdomain.com/sitemap.xml",
+    // TODO: uncomment and set my domain when going live
+    // sitemap: "https://mydomain.com/sitemap.xml",
   };
 }

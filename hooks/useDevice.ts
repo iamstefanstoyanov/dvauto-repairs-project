@@ -8,24 +8,27 @@ interface DeviceInfo {
   isMobile: boolean;
   isDesktop: boolean;
   width: number;
+  isHydrated: boolean;
 }
 
-export function useDevice(): DeviceInfo {
+const useDevice = (): DeviceInfo => {
   const [deviceInfo, setDeviceInfo] = useState<DeviceInfo>({
     isMobile: false,
     isDesktop: true,
     width: 0,
+    isHydrated: false,
   });
 
   useEffect(() => {
-    function update() {
+    const update = () => {
       const width = window.innerWidth;
       setDeviceInfo({
         isMobile: width < MOBILE_BREAKPOINT,
         isDesktop: width >= MOBILE_BREAKPOINT,
         width,
+        isHydrated: true,
       });
-    }
+    };
 
     update();
 
@@ -40,4 +43,6 @@ export function useDevice(): DeviceInfo {
   }, []);
 
   return deviceInfo;
-}
+};
+
+export default useDevice;

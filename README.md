@@ -35,15 +35,17 @@ Designed with a mobile-first approach, clean UI, and optimized performance to ef
 ## Project Structure
 
 ```
-app/                  # Next.js App Router pages and root layout
+app/                  # Next.js App Router pages, layout, loading & error
 components/
   Header/             # Sticky navigation header
   Footer/             # Multi-column footer with services & contact
   TopBar/             # Top info bar (email, phone, social links)
-  MobileMenu/         # Mobile slide-down navigation
   Sections/           # Page sections (Home, WhatWeDo, Services, OurStaff, Contact)
-  ui/                 # Reusable UI components (SectionTitle, LanguageSwitcher)
+  ui/
     Icons/            # Custom SVG icon components
+    LanguageSwitcher/ # EN/BG language toggle
+    MobileMenu/       # Mobile slide-down navigation
+    SectionTitle/     # Reusable section heading component
 config/               # Site-wide configuration (contact details, social links)
 context/              # React Context providers (LanguageContext)
 hooks/                # Custom hooks (useDevice, useTranslation)

@@ -5,7 +5,7 @@ import Calendar from "@/components/ui/Icons/Calendar";
 import Phone from "@/components/ui/Icons/Phone";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import { siteConfig } from "@/config/site";
-import { useTranslation } from "@/hooks/useTranslation";
+import useTranslation from "@/hooks/useTranslation";
 
 const Contact = () => {
   const t = useTranslation();

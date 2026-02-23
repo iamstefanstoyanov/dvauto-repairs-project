@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
-// TODO: replace with your actual domain when going live
-const BASE_URL = "https://yourdomain.com";
+// TODO: replace with my actual domain when going live
+const BASE_URL = "https://mydomain.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
