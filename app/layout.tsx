@@ -49,7 +49,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         <LanguageProvider>
-          <div className="sticky top-0 z-50">
+          <div className="sticky top-0 z-50" data-sticky-header>
             <TopBar />
             <Header />
           </div>

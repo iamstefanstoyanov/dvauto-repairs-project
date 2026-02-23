@@ -8,7 +8,7 @@ import { useCallback, useState } from "react";
 
 const NAV_KEYS = [
   { key: "home", sectionId: "home" },
-  { key: "about", sectionId: "about" },
+  { key: "whatWeDo", sectionId: "what-we-do" },
   { key: "services", sectionId: "services" },
   { key: "ourStaff", sectionId: "our-staff" },
   { key: "contact", sectionId: "contact" },

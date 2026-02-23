@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 import { useTranslation } from "@/hooks/useTranslation";
 import { Phone } from "../ui/Icons/Phone";
 
-export function HomeSection() {
+export function Home() {
   const t = useTranslation();
 
   return (
