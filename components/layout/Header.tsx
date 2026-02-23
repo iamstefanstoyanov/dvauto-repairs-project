@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import Image from "next/image";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useDevice } from "@/hooks/useDevice";
 import { useTranslation } from "@/hooks/useTranslation";
+import Image from "next/image";
+import { useCallback, useState } from "react";
 
 const NAV_KEYS = [
   { key: "home", sectionId: "home" },
@@ -22,7 +22,10 @@ export function Header() {
   const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const stickyHeader = document.querySelector("[data-sticky-header]");
+      const offset = stickyHeader?.getBoundingClientRect().height ?? 0;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
     }
     setMobileMenuOpen(false);
   }, []);
@@ -48,7 +51,7 @@ export function Header() {
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className="text-sm font-medium transition-colors hover:text-gray-600"
+                className="text-sm cursor-pointer font-medium transition-colors hover:text-white hover:bg-gray-500 bg-gray-100 py-1 px-3 md:px-4 md:py-2 rounded-full"
               >
                 {t.nav[item.key]}
               </button>

@@ -10,7 +10,7 @@ export function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-1.5 rounded border border-gray-300 py-1 px-2 text-sm font-medium transition-colors hover:bg-gray-100"
+      className="flex cursor-pointer items-center gap-1.5 h-9 rounded border bg-gray-100 border-gray-300 py-1 px-2 text-sm font-medium transition-colors hover:bg-gray-500"
       aria-label="Switch language"
     >
       {language === "en" ? (

@@ -10,10 +10,10 @@ export function HomeSection() {
   return (
     <section
       id="home"
-      className="flex items-center border border-gray-400 bg-transparent p-5"
+      className="flex items-center min-h-dvh md:min-h-135 bg-transparent p-5"
     >
       <div className="flex w-full flex-col items-start justify-center gap-6 md:flex-row md:gap-12">
-        <div className="max-w-2xl space-y-3 md:space-y-5">
+        <div className="max-w-3xl space-y-3 md:space-y-5">
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
             {t.sections.home.headline}
           </h1>
