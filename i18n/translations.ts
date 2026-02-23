@@ -4,25 +4,29 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
-      ourWork: "Our Work",
-      ourGarage: "Our Garage",
-      contact: "Contact Us",
+      services: "Services",
+      ourStaff: "Our Staff",
+      contact: "Contact",
     },
     sections: {
       home: {
         title: "Home",
+        headline: "We Care about Your Car",
+        subtitle: "Reliable, fast, and expert car repair services to keep your vehicle running at its best.",
+        description: "From routine maintenance to major fixes, we ensure smooth, safe, and stress-free driving.",
+        emergencyCall: "Emergency Call 24/7",
       },
       about: {
         title: "About",
       },
-      ourWork: {
-        title: "Our Work",
+      services: {
+        title: "Services",
       },
-      ourGarage: {
-        title: "Our Garage",
+      ourStaff: {
+        title: "Our Staff",
       },
       contact: {
-        title: "Contact Us",
+        title: "Contact",
       },
     },
     footer: {
@@ -34,25 +38,29 @@ const translations = {
     nav: {
       home: "Начало",
       about: "За нас",
-      ourWork: "Нашата работа",
-      ourGarage: "Нашият гараж",
-      contact: "Контакти",
+      services: "Услуги",
+      ourStaff: "Нашият екип",
+      contact: "Контакт",
     },
     sections: {
       home: {
         title: "Начало",
+        headline: "Грижим се за Вашия автомобил",
+        subtitle: "Надеждни, бързи и професионални автосервизни услуги, за да поддържате автомобила си в отлично състояние.",
+        description: "От рутинна поддръжка до основни ремонти — осигуряваме гладко, безопасно и безгрижно шофиране.",
+        emergencyCall: "Спешно обаждане 24/7",
       },
       about: {
         title: "За нас",
       },
-      ourWork: {
-        title: "Нашата работа",
+      services: {
+        title: "Услуги",
       },
-      ourGarage: {
-        title: "Нашият гараж",
+      ourStaff: {
+        title: "Нашият екип",
       },
       contact: {
-        title: "Контакти",
+        title: "Контакт",
       },
     },
     footer: {

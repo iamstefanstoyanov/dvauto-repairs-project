@@ -9,8 +9,8 @@ import { useTranslation } from "@/hooks/useTranslation";
 const NAV_KEYS = [
   { key: "home", sectionId: "home" },
   { key: "about", sectionId: "about" },
-  { key: "ourWork", sectionId: "our-work" },
-  { key: "ourGarage", sectionId: "our-garage" },
+  { key: "services", sectionId: "services" },
+  { key: "ourStaff", sectionId: "our-staff" },
   { key: "contact", sectionId: "contact" },
 ] as const;
 
