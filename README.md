@@ -21,14 +21,16 @@ Designed with a mobile-first approach, clean UI, and optimized performance to ef
 
 ## Tech Stack
 
-| Layer       | Technology                    |
-| ----------- | ----------------------------- |
-| Framework   | Next.js 16 (App Router)       |
-| Language    | TypeScript                    |
-| UI          | React 19                      |
-| Styling     | Tailwind CSS 4                |
-| Linting     | ESLint with eslint-config-next|
-| Deployment  | Vercel (planned)              |
+| Layer      | Technology                     |
+| ---------- | ------------------------------ |
+| Framework  | Next.js 16 (App Router)        |
+| Language   | TypeScript                     |
+| UI         | React 19                       |
+| Styling    | Tailwind CSS 4                 |
+| Linting    | ESLint with eslint-config-next |
+| Formatting | Prettier                       |
+| Git Hooks  | Husky + lint-staged            |
+| Deployment | Vercel (planned)               |
 
 ## Project Structure
 

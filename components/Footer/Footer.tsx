@@ -16,9 +16,7 @@ const Footer = () => {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-3 text-lg font-bold text-white">{t.brand}</h3>
-            <p className="mb-5 text-sm leading-relaxed">
-              {t.footer.description}
-            </p>
+            <p className="mb-5 text-sm leading-relaxed">{t.footer.description}</p>
             <div className="flex items-center gap-3">
               <a
                 href={siteConfig.socials.facebook}
@@ -42,9 +40,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="mb-3 text-lg font-bold text-white">
-              {t.footer.contactInfo}
-            </h3>
+            <h3 className="mb-3 text-lg font-bold text-white">{t.footer.contactInfo}</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 {siteConfig.address.line1}
@@ -74,17 +70,13 @@ const Footer = () => {
           </div>
 
           <div className="sm:col-span-2 lg:col-span-2">
-            <h3 className="mb-3 text-lg font-bold text-white">
-              {t.footer.ourServices}
-            </h3>
+            <h3 className="mb-3 text-lg font-bold text-white">{t.footer.ourServices}</h3>
             <ul className="columns-1 gap-x-8 space-y-2 text-sm lg:columns-2">
               {t.footer.services.map((service) => (
                 <li key={service}>
                   <button
                     onClick={() => {
-                      document
-                        .getElementById("what-we-do")
-                        ?.scrollIntoView({ behavior: "smooth" });
+                      document.getElementById("what-we-do")?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="hover:text-white"
                   >

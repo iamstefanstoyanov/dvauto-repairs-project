@@ -29,14 +29,14 @@ interface MobileMenuProps {
 const MobileMenu = ({ translations, onNavigate }: MobileMenuProps) => (
   <nav className="absolute left-0 top-full z-50 w-full border-t border-gray-200 bg-white shadow-lg">
     {NAV_ITEMS.map(({ key, sectionId, Icon }) => (
-        <button
-          key={sectionId}
-          onClick={() => onNavigate(sectionId)}
-          className="flex w-full items-center gap-3 border-b border-gray-100 px-6 py-3.5 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-red-600"
-        >
-          <Icon className="h-4.5 w-4.5 text-red-600" />
-          {translations[key]}
-        </button>
+      <button
+        key={sectionId}
+        onClick={() => onNavigate(sectionId)}
+        className="flex w-full items-center gap-3 border-b border-gray-100 px-6 py-3.5 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-red-600"
+      >
+        <Icon className="h-4.5 w-4.5 text-red-600" />
+        {translations[key]}
+      </button>
     ))}
   </nav>
 );

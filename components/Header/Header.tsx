@@ -34,16 +34,8 @@ const Header = () => {
   return (
     <header className="border border-gray-300 bg-white p-2 md:p-5">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <button
-          onClick={() => scrollToSection("home")}
-        >
-          <Image
-            src="/logo.png"
-            alt={t.brand}
-            width={90}
-            height={60}
-            priority
-          />
+        <button onClick={() => scrollToSection("home")}>
+          <Image src="/logo.png" alt={t.brand} width={90} height={60} priority />
         </button>
 
         {!isMobile && (
@@ -85,10 +77,7 @@ const Header = () => {
       </div>
 
       {isMobile && mobileMenuOpen && (
-        <MobileMenu
-          translations={t.nav}
-          onNavigate={scrollToSection}
-        />
+        <MobileMenu translations={t.nav} onNavigate={scrollToSection} />
       )}
     </header>
   );

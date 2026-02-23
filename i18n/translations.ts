@@ -12,20 +12,43 @@ const translations = {
       home: {
         title: "Home",
         headline: "We Care about Your Car",
-        subtitle: "Reliable, fast, and expert car repair services to keep your vehicle running at its best.",
-        description: "From routine maintenance to major fixes, we ensure smooth, safe, and stress-free driving.",
+        subtitle:
+          "Reliable, fast, and expert car repair services to keep your vehicle running at its best.",
+        description:
+          "From routine maintenance to major fixes, we ensure smooth, safe, and stress-free driving.",
         emergencyCall: "Emergency Call 24/7",
       },
       whatWeDo: {
         title: "What We Do",
-        description: "We provide complete car care solutions—from routine servicing and diagnostics to major repairs and emergency fixes.",
+        description:
+          "We provide complete car care solutions—from routine servicing and diagnostics to major repairs and emergency fixes.",
         cards: {
-          maintenance: { title: "Auto Maintenance Services", description: "Keep your car in top condition with routine checks and servicing." },
-          brakes: { title: "Brake Repair Pads & Rotors", description: "Smooth, safe braking with expert repair and high-quality replacements." },
-          suspension: { title: "Shocks, Struts Replacement", description: "Restore ride comfort and stability with professional suspension care." },
-          diagnostics: { title: "System Diagnosis & Repair", description: "Accurate diagnostics to quickly identify issues and ensure reliable performance." },
-          ac: { title: "Air Conditioning Services", description: "Keep your cabin cool and comfortable with complete AC check and repair." },
-          tyres: { title: "Tires & Wheel Balancing", description: "Improve safety and driving smoothness with proper tire care and balancing." },
+          maintenance: {
+            title: "Auto Maintenance Services",
+            description: "Keep your car in top condition with routine checks and servicing.",
+          },
+          brakes: {
+            title: "Brake Repair Pads & Rotors",
+            description: "Smooth, safe braking with expert repair and high-quality replacements.",
+          },
+          suspension: {
+            title: "Shocks, Struts Replacement",
+            description: "Restore ride comfort and stability with professional suspension care.",
+          },
+          diagnostics: {
+            title: "System Diagnosis & Repair",
+            description:
+              "Accurate diagnostics to quickly identify issues and ensure reliable performance.",
+          },
+          ac: {
+            title: "Air Conditioning Services",
+            description: "Keep your cabin cool and comfortable with complete AC check and repair.",
+          },
+          tyres: {
+            title: "Tires & Wheel Balancing",
+            description:
+              "Improve safety and driving smoothness with proper tire care and balancing.",
+          },
         },
       },
       services: {
@@ -55,7 +78,8 @@ const translations = {
     },
     footer: {
       rights: "All rights reserved.",
-      description: "Professional car and van repair garage providing quality workmanship and reliable service you can trust.",
+      description:
+        "Professional car and van repair garage providing quality workmanship and reliable service you can trust.",
       contactInfo: "Contact Info",
       ourServices: "Our Services",
       services: [
@@ -85,20 +109,45 @@ const translations = {
       home: {
         title: "Начало",
         headline: "Грижим се за Вашия автомобил",
-        subtitle: "Надеждни, бързи и професионални автосервизни услуги, за да поддържате автомобила си в отлично състояние.",
-        description: "От рутинна поддръжка до основни ремонти — осигуряваме гладко, безопасно и безгрижно шофиране.",
+        subtitle:
+          "Надеждни, бързи и професионални автосервизни услуги, за да поддържате автомобила си в отлично състояние.",
+        description:
+          "От рутинна поддръжка до основни ремонти — осигуряваме гладко, безопасно и безгрижно шофиране.",
         emergencyCall: "Спешно обаждане 24/7",
       },
       whatWeDo: {
         title: "Какво правим",
-        description: "Предлагаме цялостни решения за грижа за автомобила — от рутинно обслужване и диагностика до основни ремонти и спешни поправки.",
+        description:
+          "Предлагаме цялостни решения за грижа за автомобила — от рутинно обслужване и диагностика до основни ремонти и спешни поправки.",
         cards: {
-          maintenance: { title: "Автосервизно обслужване", description: "Поддържайте колата си в отлично състояние с рутинни проверки и обслужване." },
-          brakes: { title: "Ремонт на спирачки", description: "Гладко и безопасно спиране с експертен ремонт и качествени части." },
-          suspension: { title: "Амортисьори и окачване", description: "Възстановете комфорта и стабилността с професионална грижа за окачването." },
-          diagnostics: { title: "Диагностика и ремонт", description: "Точна диагностика за бързо откриване на проблеми и надеждна работа." },
-          ac: { title: "Климатични услуги", description: "Поддържайте купето хладно и комфортно с пълна проверка и ремонт на климатика." },
-          tyres: { title: "Гуми и баланс", description: "Подобрете безопасността и плавността на шофиране с правилна грижа за гумите." },
+          maintenance: {
+            title: "Автосервизно обслужване",
+            description:
+              "Поддържайте колата си в отлично състояние с рутинни проверки и обслужване.",
+          },
+          brakes: {
+            title: "Ремонт на спирачки",
+            description: "Гладко и безопасно спиране с експертен ремонт и качествени части.",
+          },
+          suspension: {
+            title: "Амортисьори и окачване",
+            description:
+              "Възстановете комфорта и стабилността с професионална грижа за окачването.",
+          },
+          diagnostics: {
+            title: "Диагностика и ремонт",
+            description: "Точна диагностика за бързо откриване на проблеми и надеждна работа.",
+          },
+          ac: {
+            title: "Климатични услуги",
+            description:
+              "Поддържайте купето хладно и комфортно с пълна проверка и ремонт на климатика.",
+          },
+          tyres: {
+            title: "Гуми и баланс",
+            description:
+              "Подобрете безопасността и плавността на шофиране с правилна грижа за гумите.",
+          },
         },
       },
       services: {
@@ -111,7 +160,8 @@ const translations = {
         title: "Контакт",
         appointment: {
           title: "Запазете час",
-          description: "Резервирайте своя час с едно кликване и поддържайте колата си в перфектно състояние.",
+          description:
+            "Резервирайте своя час с едно кликване и поддържайте колата си в перфектно състояние.",
           button: "Запази час",
         },
         hours: {
@@ -128,7 +178,8 @@ const translations = {
     },
     footer: {
       rights: "Всички права запазени.",
-      description: "Професионален автосервиз за ремонт на автомобили и бусове — качествена работа и надеждно обслужване, на което можете да разчитате.",
+      description:
+        "Професионален автосервиз за ремонт на автомобили и бусове — качествена работа и надеждно обслужване, на което можете да разчитате.",
       contactInfo: "Информация за контакт",
       ourServices: "Нашите услуги",
       services: [

@@ -22,10 +22,7 @@ const WhatWeDo = () => {
   const t = useTranslation();
 
   return (
-    <section
-      id="what-we-do"
-      className="border border-gray-300 bg-white/90 px-5 py-12"
-    >
+    <section id="what-we-do" className="border border-gray-300 bg-white/90 px-5 py-12">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
           title={t.sections.whatWeDo.title}
@@ -36,17 +33,12 @@ const WhatWeDo = () => {
           {SERVICE_CARDS.map(({ key, Icon }) => {
             const card = t.sections.whatWeDo.cards[key];
             return (
-              <div
-                key={key}
-                className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
-              >
+              <div key={key} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h4 className="mb-2 text-base font-semibold">{card.title}</h4>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  {card.description}
-                </p>
+                <p className="text-sm leading-relaxed text-gray-600">{card.description}</p>
               </div>
             );
           })}
