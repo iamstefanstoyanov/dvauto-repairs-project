@@ -1,7 +1,7 @@
 "use client";
 
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import { useTranslation } from "@/hooks/useTranslation";
-import SectionTitle from "@/components/ui/SectionTitle";
 
 const Services = () => {
   const t = useTranslation();

@@ -1,7 +1,7 @@
 "use client";
 
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import MobileMenu from "@/components/MobileMenu/MobileMenu";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher/LanguageSwitcher";
+import MobileMenu from "@/components/ui/MobileMenu/MobileMenu";
 import { useDevice } from "@/hooks/useDevice";
 import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";

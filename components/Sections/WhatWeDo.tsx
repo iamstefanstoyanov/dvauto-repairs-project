@@ -6,8 +6,8 @@ import Snowflake from "@/components/ui/Icons/Snowflake";
 import Spring from "@/components/ui/Icons/Spring";
 import Tyre from "@/components/ui/Icons/Tyre";
 import Wrench from "@/components/ui/Icons/Wrench";
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import { useTranslation } from "@/hooks/useTranslation";
-import SectionTitle from "@/components/ui/SectionTitle";
 
 const SERVICE_CARDS = [
   { key: "maintenance", Icon: Wrench },
