@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useDevice } from "@/hooks/useDevice";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -27,13 +28,18 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border border-gray-300 bg-white p-5">
+    <header className="border border-gray-300 bg-white p-2 md:p-5">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <button
           onClick={() => scrollToSection("home")}
-          className="text-lg font-bold"
         >
-          {t.brand}
+          <Image
+            src="/logo.png"
+            alt={t.brand}
+            width={90}
+            height={60}
+            priority
+          />
         </button>
 
         {!isMobile && (

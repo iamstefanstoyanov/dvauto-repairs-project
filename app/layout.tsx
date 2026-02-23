@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { TopBar } from "@/components/layout/TopBar";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -48,7 +49,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         <LanguageProvider>
-          <Header />
+          <div className="sticky top-0 z-50">
+            <TopBar />
+            <Header />
+          </div>
           {children}
           <Footer />
         </LanguageProvider>
