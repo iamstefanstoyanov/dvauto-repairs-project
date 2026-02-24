@@ -1,12 +1,12 @@
 "use client";
 
+import Card from "@/components/ui/Card/Card";
 import Cpu from "@/components/ui/Icons/Cpu";
 import Disc from "@/components/ui/Icons/Disc";
 import Snowflake from "@/components/ui/Icons/Snowflake";
 import Spring from "@/components/ui/Icons/Spring";
 import Tyre from "@/components/ui/Icons/Tyre";
 import Wrench from "@/components/ui/Icons/Wrench";
-import Card from "@/components/ui/Card/Card";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import useTranslation from "@/hooks/useTranslation";
 
@@ -23,7 +23,7 @@ const WhatWeDo = () => {
   const t = useTranslation();
 
   return (
-    <section id="what-we-do" className="border border-gray-300 bg-white/90 px-5 py-12">
+    <section id="what-we-do" className="border border-gray-300  bg-gray-100/90 px-5 py-12">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
           title={t.sections.whatWeDo.title}

@@ -32,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="border border-gray-300 bg-white p-2 md:p-5">
+    <header className="border border-gray-300 bg-gray-100 p-2 md:p-5">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <button onClick={() => scrollToSection("home")}>
           <Image src="/logo.png" alt={t.brand} width={90} height={60} priority />
@@ -44,7 +44,7 @@ const Header = () => {
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className="text-sm cursor-pointer font-medium transition-colors hover:text-white hover:bg-gray-500 bg-gray-100 py-1 px-3 md:px-4 md:py-2 rounded-full"
+                className="text-sm cursor-pointer font-medium transition-colors hover:text-white hover:bg-gray-500 bg-gray-200 py-1 px-3 md:px-4 md:py-2 rounded-full"
               >
                 {t.nav[item.key]}
               </button>

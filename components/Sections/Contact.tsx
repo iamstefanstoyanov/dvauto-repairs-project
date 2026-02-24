@@ -1,9 +1,9 @@
 "use client";
 
+import Card from "@/components/ui/Card/Card";
 import Briefcase from "@/components/ui/Icons/Briefcase";
 import Calendar from "@/components/ui/Icons/Calendar";
 import Phone from "@/components/ui/Icons/Phone";
-import Card from "@/components/ui/Card/Card";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import { siteConfig } from "@/config/site";
 import useTranslation from "@/hooks/useTranslation";
