@@ -10,29 +10,33 @@ type CardProps = {
   children?: ReactNode;
 };
 
+const baseWrapper = "rounded-lg border border-gray-200 p-6 shadow-sm";
+const baseCircle = "mb-4 flex items-center justify-center rounded-full bg-red-600 text-white";
+const baseTitle = "mb-2 font-semibold";
+
+const centered = "flex flex-col items-center text-center";
+
 const variantStyles: Record<
   CardVariant,
   { wrapper: string; circle: string; icon: string; title: string }
 > = {
   service: {
-    wrapper: "rounded-lg border border-gray-200 bg-white p-6 shadow-sm",
-    circle: "mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white",
+    wrapper: `${baseWrapper} bg-white`,
+    circle: `${baseCircle} h-12 w-12`,
     icon: "h-6 w-6",
-    title: "mb-2 text-base font-semibold",
+    title: `${baseTitle} text-base`,
   },
   feature: {
-    wrapper:
-      "flex flex-col items-center rounded-lg border border-gray-200 bg-white/90 p-6 text-center shadow-sm",
-    circle: "mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white",
+    wrapper: `${baseWrapper} ${centered} bg-white/90`,
+    circle: `${baseCircle} h-14 w-14`,
     icon: "h-7 w-7",
-    title: "mb-2 text-base font-semibold",
+    title: `${baseTitle} text-base`,
   },
   contact: {
-    wrapper:
-      "flex flex-col items-center rounded-lg border border-gray-200 bg-white/90 p-6 text-center shadow-sm",
-    circle: "mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white",
+    wrapper: `${baseWrapper} ${centered} bg-white/90`,
+    circle: `${baseCircle} h-14 w-14`,
     icon: "h-6 w-6",
-    title: "mb-2 text-lg font-semibold",
+    title: `${baseTitle} text-lg`,
   },
 };
 

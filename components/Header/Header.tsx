@@ -2,6 +2,7 @@
 
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher/LanguageSwitcher";
 import MobileMenu from "@/components/ui/MobileMenu/MobileMenu";
+import useActiveSection from "@/hooks/useActiveSection";
 import useDevice from "@/hooks/useDevice";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
@@ -14,11 +15,12 @@ const NAV_KEYS = [
   { key: "reviews", sectionId: "reviews" },
   { key: "contact", sectionId: "contact" },
 ] as const;
-
+const baseClasses = "block h-0.5 w-6 bg-black";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile, isHydrated } = useDevice();
   const t = useTranslation();
+  const activeSection = useActiveSection();
 
   const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -39,12 +41,14 @@ const Header = () => {
         </button>
 
         {isHydrated && !isMobile && (
-          <nav className="flex items-center gap-6">
+          <nav className="flex flex-row items-center gap-5 border border-gray-300 bg-gray-200 rounded-full shadow-sm">
             {NAV_KEYS.map((item) => (
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className="text-sm cursor-pointer font-medium transition-colors hover:text-white hover:bg-gray-500 bg-gray-200 py-1 px-3 md:px-4 md:py-2 rounded-full"
+                className={`text-sm cursor-pointer font-medium transition-colors py-1 px-3 md:px-4 md:py-2 rounded-full ${
+                  activeSection === item.sectionId ? "bg-red-600 text-white" : "hover:bg-gray-400"
+                }`}
               >
                 {t.nav[item.key]}
               </button>
@@ -63,13 +67,13 @@ const Header = () => {
               aria-expanded={mobileMenuOpen}
             >
               <span
-                className={`block h-0.5 w-6 bg-black transition-transform ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`}
+                className={` ${baseClasses} transition-transform ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`}
               />
               <span
-                className={`block h-0.5 w-6 bg-black transition-opacity ${mobileMenuOpen ? "opacity-0" : ""}`}
+                className={` ${baseClasses} transition-opacity ${mobileMenuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block h-0.5 w-6 bg-black transition-transform ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+                className={` ${baseClasses} transition-transform ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
               />
             </button>
           )}
@@ -77,7 +81,11 @@ const Header = () => {
       </div>
 
       {isHydrated && isMobile && mobileMenuOpen && (
-        <MobileMenu translations={t.nav} onNavigate={scrollToSection} />
+        <MobileMenu
+          translations={t.nav}
+          activeSection={activeSection}
+          onNavigate={scrollToSection}
+        />
       )}
     </header>
   );
