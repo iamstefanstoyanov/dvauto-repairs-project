@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useCallback,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 
 export type Language = "en" | "bg";
 
@@ -14,23 +20,37 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-const getInitialLanguage = (): Language => {
-  if (typeof window === "undefined") return "en";
+let listeners: (() => void)[] = [];
+
+const subscribe = (listener: () => void) => {
+  listeners = [...listeners, listener];
+  return () => {
+    listeners = listeners.filter((l) => l !== listener);
+  };
+};
+
+const getSnapshot = (): Language => {
   const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "en" || stored === "bg") return stored;
-  return "en";
+  return stored === "bg" ? "bg" : "en";
+};
+
+const getServerSnapshot = (): Language => "en";
+
+const setStoredLanguage = (lang: Language) => {
+  localStorage.setItem(STORAGE_KEY, lang);
+  document.documentElement.lang = lang;
+  listeners.forEach((l) => l());
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
-
-  useEffect(() => {
-    document.documentElement.lang = language;
-    localStorage.setItem(STORAGE_KEY, language);
-  }, [language]);
+  const language = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => (prev === "en" ? "bg" : "en"));
+    setStoredLanguage(language === "en" ? "bg" : "en");
+  }, [language]);
+
+  const setLanguage = useCallback((lang: Language) => {
+    setStoredLanguage(lang);
   }, []);
 
   return (

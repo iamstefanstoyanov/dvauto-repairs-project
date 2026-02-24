@@ -17,7 +17,7 @@ const NAV_ITEMS: NavItem[] = [
   { key: "home", sectionId: "home", Icon: Home },
   { key: "whatWeDo", sectionId: "what-we-do", Icon: Wrench },
   { key: "whyUs", sectionId: "why-us", Icon: Shield },
-  { key: "ourStaff", sectionId: "our-staff", Icon: Users },
+  { key: "reviews", sectionId: "reviews", Icon: Users },
   { key: "contact", sectionId: "contact", Icon: Phone },
 ];
 

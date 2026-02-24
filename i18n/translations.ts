@@ -5,7 +5,7 @@ const translations = {
       home: "Home",
       whatWeDo: "What We Do",
       whyUs: "Why Us",
-      ourStaff: "Our Staff",
+      reviews: "Reviews",
       contact: "Contact",
     },
     sections: {
@@ -75,8 +75,12 @@ const translations = {
           },
         },
       },
-      ourStaff: {
-        title: "Our Staff",
+      reviews: {
+        title: "What Customers Say",
+        subtitle:
+          "Real feedback from real customers — see why drivers trust us with their vehicles.",
+        readMore: "Read more",
+        showLess: "Show less",
       },
       contact: {
         title: "Contact",
@@ -123,7 +127,7 @@ const translations = {
       home: "Начало",
       whatWeDo: "Какво правим",
       whyUs: "Защо нас",
-      ourStaff: "Нашият екип",
+      reviews: "Отзиви",
       contact: "Контакт",
     },
     sections: {
@@ -196,8 +200,12 @@ const translations = {
           },
         },
       },
-      ourStaff: {
-        title: "Нашият екип",
+      reviews: {
+        title: "Какво казват клиентите",
+        subtitle:
+          "Реални отзиви от реални клиенти — вижте защо шофьорите ни се доверяват за своите автомобили.",
+        readMore: "Прочети повече",
+        showLess: "Покажи по-малко",
       },
       contact: {
         title: "Контакт",
