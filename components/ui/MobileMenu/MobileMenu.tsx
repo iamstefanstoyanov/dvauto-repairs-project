@@ -3,7 +3,7 @@
 import { ComponentType } from "react";
 import Home from "@/components/ui/Icons/Home";
 import Wrench from "@/components/ui/Icons/Wrench";
-import Cog from "@/components/ui/Icons/Cog";
+import Shield from "@/components/ui/Icons/Shield";
 import Users from "@/components/ui/Icons/Users";
 import Phone from "@/components/ui/Icons/Phone";
 
@@ -16,7 +16,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { key: "home", sectionId: "home", Icon: Home },
   { key: "whatWeDo", sectionId: "what-we-do", Icon: Wrench },
-  { key: "services", sectionId: "services", Icon: Cog },
+  { key: "whyUs", sectionId: "why-us", Icon: Shield },
   { key: "ourStaff", sectionId: "our-staff", Icon: Users },
   { key: "contact", sectionId: "contact", Icon: Phone },
 ];

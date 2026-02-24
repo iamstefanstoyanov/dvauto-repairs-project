@@ -1,14 +1,14 @@
 import Contact from "@/components/Sections/Contact";
 import Home from "@/components/Sections/Home";
 import OurStaff from "@/components/Sections/OurStaff";
-import Services from "@/components/Sections/Services";
+import WhyUs from "@/components/Sections/WhyUs";
 import WhatWeDo from "@/components/Sections/WhatWeDo";
 import { ComponentType } from "react";
 
 const SECTIONS: { id: string; Component: ComponentType }[] = [
   { id: "section-home", Component: Home },
   { id: "section-what-we-do", Component: WhatWeDo },
-  { id: "section-services", Component: Services },
+  { id: "section-why-us", Component: WhyUs },
   { id: "section-our-staff", Component: OurStaff },
   { id: "section-contact", Component: Contact },
 ];

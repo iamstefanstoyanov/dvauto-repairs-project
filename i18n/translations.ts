@@ -4,7 +4,7 @@ const translations = {
     nav: {
       home: "Home",
       whatWeDo: "What We Do",
-      services: "Services",
+      whyUs: "Why Us",
       ourStaff: "Our Staff",
       contact: "Contact",
     },
@@ -51,8 +51,29 @@ const translations = {
           },
         },
       },
-      services: {
-        title: "Services",
+      whyUs: {
+        title: "Why Choose Us",
+        description:
+          "We combine expert technicians, modern equipment, and genuine parts to deliver repairs you can trust. With transparent pricing and quick turnaround times, we make car care simple, reliable, and stress-free.",
+        cards: {
+          engineers: {
+            title: "Expert Engineers",
+            description:
+              "Skilled professionals delivering accurate, reliable, and quality repairs.",
+          },
+          experience: {
+            title: "Experience & Skills",
+            description: "Years of proven experience ensuring your car gets the best care.",
+          },
+          guarantee: {
+            title: "Guarantee Service",
+            description: "Every service comes with assured quality and long-lasting performance.",
+          },
+          trusted: {
+            title: "Trusted Work",
+            description: "Honest, transparent, and dependable repairs you can always count on.",
+          },
+        },
       },
       ourStaff: {
         title: "Our Staff",
@@ -101,7 +122,7 @@ const translations = {
     nav: {
       home: "Начало",
       whatWeDo: "Какво правим",
-      services: "Услуги",
+      whyUs: "Защо нас",
       ourStaff: "Нашият екип",
       contact: "Контакт",
     },
@@ -150,8 +171,30 @@ const translations = {
           },
         },
       },
-      services: {
-        title: "Услуги",
+      whyUs: {
+        title: "Защо да изберете нас",
+        description:
+          "Съчетаваме експертни техници, модерно оборудване и оригинални части, за да предоставим ремонти, на които можете да разчитате. С прозрачни цени и бързо изпълнение правим грижата за автомобила проста, надеждна и безгрижна.",
+        cards: {
+          engineers: {
+            title: "Експертни инженери",
+            description:
+              "Квалифицирани професионалисти, осигуряващи точни, надеждни и качествени ремонти.",
+          },
+          experience: {
+            title: "Опит и умения",
+            description: "Години доказан опит, гарантиращ най-добрата грижа за Вашия автомобил.",
+          },
+          guarantee: {
+            title: "Гарантирано обслужване",
+            description: "Всяка услуга е придружена от гарантирано качество и дълготрайна работа.",
+          },
+          trusted: {
+            title: "Доверена работа",
+            description:
+              "Честни, прозрачни и надеждни ремонти, на които винаги можете да разчитате.",
+          },
+        },
       },
       ourStaff: {
         title: "Нашият екип",

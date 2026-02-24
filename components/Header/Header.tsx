@@ -10,7 +10,7 @@ import { useCallback, useState } from "react";
 const NAV_KEYS = [
   { key: "home", sectionId: "home" },
   { key: "whatWeDo", sectionId: "what-we-do" },
-  { key: "services", sectionId: "services" },
+  { key: "whyUs", sectionId: "why-us" },
   { key: "ourStaff", sectionId: "our-staff" },
   { key: "contact", sectionId: "contact" },
 ] as const;
