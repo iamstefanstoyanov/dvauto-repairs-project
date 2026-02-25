@@ -1,7 +1,6 @@
 # DVMI LTD — Auto Repair Shop Website
 
-A responsive single-page application built for a professional car and van repair garage.
-Designed with a mobile-first approach, clean UI, and optimized performance to effectively showcase services, business information, and customer contact options.
+A responsive single-page application built for a professional car and van repair garage. Designed with a mobile-first approach, clean UI, and optimized performance to showcase services, business information, and customer contact options.
 
 ## Live Demo
 
@@ -17,20 +16,23 @@ Designed with a mobile-first approach, clean UI, and optimized performance to ef
 - Security hardened with custom HTTP headers (HSTS, X-Frame-Options, CSP, etc.)
 - Custom SVG icon system — lightweight, no icon-library dependencies
 - Hybrid rendering: Server Components for static content, Client Components for interactivity
-- Background parallax effect with semi-transparent section overlays
+- Background image with semi-transparent section overlays
+- Reviews carousel with keen-slider
 
 ## Tech Stack
 
-| Layer      | Technology                     |
-| ---------- | ------------------------------ |
-| Framework  | Next.js 16 (App Router)        |
-| Language   | TypeScript                     |
-| UI         | React 19                       |
-| Styling    | Tailwind CSS 4                 |
-| Linting    | ESLint with eslint-config-next |
-| Formatting | Prettier                       |
-| Git Hooks  | Husky + lint-staged            |
-| Deployment | Vercel (planned)               |
+| Layer      | Technology                      |
+| ---------- | ------------------------------- |
+| Framework  | Next.js 16 (App Router)         |
+| Language   | TypeScript                      |
+| UI         | React 19                        |
+| Styling    | Tailwind CSS 4                  |
+| Carousel   | keen-slider                     |
+| Testing    | Vitest + @testing-library/react |
+| Linting    | ESLint with eslint-config-next  |
+| Formatting | Prettier                        |
+| Git Hooks  | Husky + lint-staged             |
+| Deployment | Vercel (planned)                |
 
 ## Project Structure
 
@@ -40,17 +42,18 @@ components/
   Header/             # Sticky navigation header
   Footer/             # Multi-column footer with services & contact
   TopBar/             # Top info bar (email, phone, social links)
-  Sections/           # Page sections (Home, WhatWeDo, Services, OurStaff, Contact)
+  Sections/           # Page sections (Home, WhatWeDo, WhyUs, Reviews, Contact)
   ui/
     Icons/            # Custom SVG icon components
+    Card/             # Reusable card component
     LanguageSwitcher/ # EN/BG language toggle
     MobileMenu/       # Mobile slide-down navigation
     SectionTitle/     # Reusable section heading component
 config/               # Site-wide configuration (contact details, social links)
 context/              # React Context providers (LanguageContext)
-hooks/                # Custom hooks (useDevice, useTranslation)
+hooks/                # Custom hooks (useDevice, useTranslation, useActiveSection)
 i18n/                 # Translation strings (EN & BG)
-styles/               # Global CSS
+utils/                # Test helpers and wrappers
 ```
 
 ## Getting Started
@@ -68,6 +71,20 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Scripts
+
+| Command              | Description                     |
+| -------------------- | ------------------------------- |
+| `pnpm dev`           | Start development server        |
+| `pnpm build`         | Build for production            |
+| `pnpm start`         | Start production server         |
+| `pnpm lint`          | Run ESLint                      |
+| `pnpm test`          | Run tests once (colored output) |
+| `pnpm test:watch`    | Run tests in watch mode         |
+| `pnpm test:ui`       | Open Vitest UI in browser       |
+| `pnpm test:coverage` | Run tests with coverage report  |
+| `pnpm prettier:fix`  | Format code with Prettier       |
 
 ## Build for Production
 
