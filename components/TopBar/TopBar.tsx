@@ -5,7 +5,7 @@ import Phone from "@/components/ui/Icons/Phone";
 import { siteConfig } from "@/config/site";
 
 const TopBar = () => (
-  <div className="hidden bg-gray-900 px-5 py-2 text-sm text-white lg:block">
+  <div className="hidden relative z-50 bg-black px-5 py-2 text-sm text-white lg:block shadow-[0_0_5px_4px_rgba(0,0,0,0.8)]">
     <div className="mx-auto flex max-w-7xl items-center justify-between">
       <div className="flex items-center gap-4">
         <a

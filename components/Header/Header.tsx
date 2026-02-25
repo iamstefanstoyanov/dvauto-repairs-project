@@ -38,7 +38,16 @@ const Header = () => {
     <header className="border border-gray-300 bg-gray-100 p-2 md:p-5">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <button onClick={() => scrollToSection("home")}>
-          <Image src="/logo.png" alt={t.brand} width={90} height={60} priority />
+          <div className="rounded-sm overflow-hidden bg-black shadow-[0_0_5px_5px_rgba(0,0,0,1)]">
+            <Image
+              src="/logo.png"
+              alt={t.brand}
+              width={60}
+              height={60}
+              priority
+              className="block"
+            />
+          </div>
         </button>
 
         {isHydrated && !isMobile && (
