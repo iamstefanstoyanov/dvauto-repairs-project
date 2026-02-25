@@ -5,6 +5,7 @@ import MobileMenu from "@/components/ui/MobileMenu/MobileMenu";
 import useActiveSection from "@/hooks/useActiveSection";
 import useDevice from "@/hooks/useDevice";
 import useTranslation from "@/hooks/useTranslation";
+import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { useCallback, useState } from "react";
 
@@ -46,9 +47,10 @@ const Header = () => {
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className={`text-sm cursor-pointer font-medium transition-colors py-1 px-3 md:px-4 md:py-2 rounded-full ${
-                  activeSection === item.sectionId ? "bg-red-600 text-white" : "hover:bg-gray-400"
-                }`}
+                className={cn(
+                  "cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-colors md:px-4 md:py-2",
+                  activeSection === item.sectionId ? "bg-red-600 text-white" : "hover:bg-gray-400",
+                )}
               >
                 {t.nav[item.key]}
               </button>
@@ -67,13 +69,21 @@ const Header = () => {
               aria-expanded={mobileMenuOpen}
             >
               <span
-                className={` ${baseClasses} transition-transform ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`}
+                className={cn(
+                  baseClasses,
+                  "transition-transform",
+                  mobileMenuOpen && "translate-y-2 rotate-45",
+                )}
               />
               <span
-                className={` ${baseClasses} transition-opacity ${mobileMenuOpen ? "opacity-0" : ""}`}
+                className={cn(baseClasses, "transition-opacity", mobileMenuOpen && "opacity-0")}
               />
               <span
-                className={` ${baseClasses} transition-transform ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+                className={cn(
+                  baseClasses,
+                  "transition-transform",
+                  mobileMenuOpen && "-translate-y-2 -rotate-45",
+                )}
               />
             </button>
           )}

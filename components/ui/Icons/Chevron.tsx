@@ -1,3 +1,5 @@
+import { cn } from "@/utils/cn";
+
 const directionClasses = {
   left: "",
   right: "rotate-180",
@@ -16,7 +18,7 @@ const Chevron = ({ className, direction = "left" }: ChevronProps) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className={`${directionClasses[direction]} ${className ?? ""}`}
+      className={cn(directionClasses[direction], className)}
     >
       <path
         fillRule="evenodd"

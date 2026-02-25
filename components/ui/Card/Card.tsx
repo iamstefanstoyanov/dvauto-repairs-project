@@ -1,3 +1,4 @@
+import { cn } from "@/utils/cn";
 import { ComponentType, ReactNode } from "react";
 
 type CardVariant = "service" | "feature" | "contact";
@@ -21,22 +22,22 @@ const variantStyles: Record<
   { wrapper: string; circle: string; icon: string; title: string }
 > = {
   service: {
-    wrapper: `${baseWrapper} bg-white`,
-    circle: `${baseCircle} h-12 w-12`,
+    wrapper: cn(baseWrapper, "bg-white"),
+    circle: cn(baseCircle, "h-12 w-12"),
     icon: "h-6 w-6",
-    title: `${baseTitle} text-base`,
+    title: cn(baseTitle, "text-base"),
   },
   feature: {
-    wrapper: `${baseWrapper} ${centered} bg-white/90`,
-    circle: `${baseCircle} h-14 w-14`,
+    wrapper: cn(baseWrapper, centered, "bg-white/90"),
+    circle: cn(baseCircle, "h-14 w-14"),
     icon: "h-7 w-7",
-    title: `${baseTitle} text-base`,
+    title: cn(baseTitle, "text-base"),
   },
   contact: {
-    wrapper: `${baseWrapper} ${centered} bg-white/90`,
-    circle: `${baseCircle} h-14 w-14`,
+    wrapper: cn(baseWrapper, centered, "bg-white/90"),
+    circle: cn(baseCircle, "h-14 w-14"),
     icon: "h-6 w-6",
-    title: `${baseTitle} text-lg`,
+    title: cn(baseTitle, "text-lg"),
   },
 };
 

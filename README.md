@@ -27,6 +27,7 @@ A responsive single-page application built for a professional car and van repair
 | Language   | TypeScript                      |
 | UI         | React 19                        |
 | Styling    | Tailwind CSS 4                  |
+| Utilities  | clsx + tailwind-merge           |
 | Carousel   | keen-slider                     |
 | Testing    | Vitest + @testing-library/react |
 | Linting    | ESLint with eslint-config-next  |
@@ -53,7 +54,7 @@ config/               # Site-wide configuration (contact details, social links)
 context/              # React Context providers (LanguageContext)
 hooks/                # Custom hooks (useDevice, useTranslation, useActiveSection)
 i18n/                 # Translation strings (EN & BG)
-utils/                # Test helpers and wrappers
+utils/                # Shared utilities (cn class merger, test helpers)
 ```
 
 ## Getting Started

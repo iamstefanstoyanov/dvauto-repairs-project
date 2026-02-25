@@ -5,6 +5,7 @@ import Star from "@/components/ui/Icons/Star";
 import User from "@/components/ui/Icons/User";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import useTranslation from "@/hooks/useTranslation";
+import { cn } from "@/utils/cn";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { useState } from "react";
@@ -53,7 +54,7 @@ const MAX_CHARS = 150;
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }, (_, i) => (
-      <Star key={i} className={`h-4 w-4 ${i < rating ? "text-amber-400" : "text-gray-300"}`} />
+      <Star key={i} className={cn("h-4 w-4", i < rating ? "text-amber-400" : "text-gray-300")} />
     ))}
   </div>
 );
