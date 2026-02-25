@@ -7,7 +7,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "DVMI LTD | Car & Van Repairs, Tyres & Servicing",
+    /* default: "DVMI LTD | Car & Van Repairs, Tyres & Servicing", */
+    default: "Universal Lobby",
     template: "%s | DVMI LTD",
   },
   description:
