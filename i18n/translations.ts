@@ -18,6 +18,10 @@ const translations = {
           "From routine maintenance to major fixes, we ensure smooth, safe, and stress-free driving.",
         emergencyCall: "Emergency Call 24/7",
       },
+      gallery: {
+        title: "Gallery",
+        subtitle: "Check out our photos",
+      },
       whatWeDo: {
         title: "What We Do",
         description:
@@ -139,6 +143,10 @@ const translations = {
         description:
           "От рутинна поддръжка до основни ремонти — осигуряваме гладко, безопасно и безгрижно шофиране.",
         emergencyCall: "Спешно обаждане 24/7",
+      },
+      gallery: {
+        title: "Галерия",
+        subtitle: "Разгледайте нашите снимки",
       },
       whatWeDo: {
         title: "Какво правим",
