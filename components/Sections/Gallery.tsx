@@ -14,11 +14,11 @@ const GalleryCard = ({ src, alt }: { src: string; alt: string }) => (
     <Image
       src={src}
       alt={alt}
-      width={800} // required, actual image width (can be large enough)
-      height={600} // required, actual image height
+      width={800}
+      height={600}
       className="h-64 w-full object-cover md:h-72 lg:h-80"
-      quality={90} // optional, default is 75
-      priority={false} // optional, set true for above-the-fold images
+      quality={90}
+      priority={false}
     />
   </div>
 );
