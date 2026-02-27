@@ -4,6 +4,7 @@ import Reviews from "@/components/Sections/Reviews";
 import WhyUs from "@/components/Sections/WhyUs";
 import WhatWeDo from "@/components/Sections/WhatWeDo";
 import { ComponentType } from "react";
+import Gallery from "@/components/Sections/Gallery";
 
 const SECTIONS: { id: string; Component: ComponentType }[] = [
   { id: "section-home", Component: Home },
@@ -11,6 +12,7 @@ const SECTIONS: { id: string; Component: ComponentType }[] = [
   { id: "section-why-us", Component: WhyUs },
   { id: "section-reviews", Component: Reviews },
   { id: "section-contact", Component: Contact },
+  { id: "gallery", Component: Gallery },
 ];
 
 export default function Page() {
