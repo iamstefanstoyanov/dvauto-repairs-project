@@ -35,7 +35,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="border border-gray-300 bg-gray-100 p-2 md:p-5">
+    <header className="border border-gray-300 bg-gray-100 p-2 pl-4 md:p-5 md:pl-5">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <button onClick={() => scrollToSection("home")}>
           <div className="rounded-sm overflow-hidden bg-black shadow-[0_0_5px_5px_rgba(0,0,0,1)]">
@@ -45,7 +45,7 @@ const Header = () => {
               width={60}
               height={60}
               priority
-              className="block"
+              className="block h-10 w-10 md:ml-0 md:h-15 md:w-15"
             />
           </div>
         </button>
