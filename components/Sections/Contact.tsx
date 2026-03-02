@@ -12,7 +12,7 @@ const Contact = () => {
   const t = useTranslation();
 
   return (
-    <section id="contact" className="border border-gray-300 bg-transparent px-5 py-12">
+    <section id="contact" className="border border-gray-300 bg-gray-100/90 px-5 py-12">
       <div className="mx-auto max-w-7xl">
         <SectionTitle title={t.sections.contact.title} />
 

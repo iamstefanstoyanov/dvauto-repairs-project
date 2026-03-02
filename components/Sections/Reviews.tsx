@@ -116,7 +116,7 @@ const Reviews = () => {
   });
 
   return (
-    <section id="reviews" className="border border-gray-300 bg-gray-100/90 px-5 py-12">
+    <section id="reviews" className="border border-gray-300 bg-transparent px-5 py-12">
       <div className="mx-auto max-w-7xl">
         <SectionTitle title={t.sections.reviews.title} subtitle={t.sections.reviews.subtitle} />
 
