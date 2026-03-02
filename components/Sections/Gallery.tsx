@@ -7,7 +7,14 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 
-const IMAGES = ["/gallery/image1.jpg", "/gallery/image2.jpg", "/gallery/image3.jpg"];
+const BLUR_PLACEHOLDER =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+PC9zdmc+";
+
+const IMAGES = [
+  { src: "/gallery/image1.jpg", alt: "Lobby main hall interior" },
+  { src: "/gallery/image2.jpg", alt: "Lounge seating area" },
+  { src: "/gallery/image3.jpg", alt: "Reception desk view" },
+];
 
 const GalleryCard = ({ src, alt }: { src: string; alt: string }) => (
   <div className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
@@ -18,10 +25,12 @@ const GalleryCard = ({ src, alt }: { src: string; alt: string }) => (
       height={600}
       className="h-64 w-full object-cover md:h-72 lg:h-80"
       quality={90}
-      priority={false}
+      placeholder="blur"
+      blurDataURL={BLUR_PLACEHOLDER}
     />
   </div>
 );
+
 const Gallery = () => {
   const t = useTranslation();
 
@@ -49,18 +58,18 @@ const Gallery = () => {
           subtitle={t.sections.gallery.subtitle || "Check out our photos"}
         />
 
-        <div className="relative">
+        <div className="relative px-5 md:px-7">
           <div ref={sliderRef} className="keen-slider">
-            {IMAGES.map((src, i) => (
+            {IMAGES.map((image, i) => (
               <div key={i} className="keen-slider__slide">
-                <GalleryCard src={src} alt={`Gallery image ${i + 1}`} />
+                <GalleryCard src={image.src} alt={image.alt} />
               </div>
             ))}
           </div>
 
           <button
             onClick={() => instanceRef.current?.prev()}
-            className="absolute -left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-100 md:-left-5 md:h-10 md:w-10"
+            className="absolute left-0 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-100 md:h-10 md:w-10"
             aria-label="Previous image"
           >
             <Chevron direction="left" className="h-5 w-5 text-gray-700" />
@@ -68,7 +77,7 @@ const Gallery = () => {
 
           <button
             onClick={() => instanceRef.current?.next()}
-            className="absolute -right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-100 md:-right-5 md:h-10 md:w-10"
+            className="absolute right-0 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md hover:bg-gray-100 md:h-10 md:w-10"
             aria-label="Next image"
           >
             <Chevron direction="right" className="h-5 w-5 text-gray-700" />
