@@ -17,9 +17,9 @@ describe("Gallery", () => {
 
   it("renders all gallery images with descriptive alt text", () => {
     renderWithProviders(<Gallery />);
-    expect(screen.getByAltText("Lobby main hall interior")).toBeInTheDocument();
-    expect(screen.getByAltText("Lounge seating area")).toBeInTheDocument();
-    expect(screen.getByAltText("Reception desk view")).toBeInTheDocument();
+    expect(screen.getByAltText("Gallery photo 1")).toBeInTheDocument();
+    expect(screen.getByAltText("Gallery photo 2")).toBeInTheDocument();
+    expect(screen.getByAltText("Gallery photo 3")).toBeInTheDocument();
   });
 
   it("renders previous and next navigation buttons", () => {

@@ -11,9 +11,9 @@ const BLUR_PLACEHOLDER =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+PC9zdmc+";
 
 const IMAGES = [
-  { src: "/gallery/image1.png", alt: "Image" },
-  { src: "/gallery/image2.png", alt: "Image" },
-  { src: "/gallery/image3.png", alt: "Image" },
+  { src: "/gallery/image1.png", alt: "Gallery photo 1" },
+  { src: "/gallery/image2.png", alt: "Gallery photo 2" },
+  { src: "/gallery/image3.png", alt: "Gallery photo 3" },
 ];
 
 const GalleryCard = ({ src, alt }: { src: string; alt: string }) => (
