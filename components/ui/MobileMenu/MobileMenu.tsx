@@ -1,5 +1,6 @@
 "use client";
 
+import Camera from "@/components/ui/Icons/Camera";
 import Home from "@/components/ui/Icons/Home";
 import Phone from "@/components/ui/Icons/Phone";
 import Shield from "@/components/ui/Icons/Shield";
@@ -18,6 +19,7 @@ const NAV_ITEMS: NavItem[] = [
   { key: "home", sectionId: "home", Icon: Home },
   { key: "whatWeDo", sectionId: "what-we-do", Icon: Wrench },
   { key: "whyUs", sectionId: "why-us", Icon: Shield },
+  { key: "gallery", sectionId: "gallery", Icon: Camera },
   { key: "reviews", sectionId: "reviews", Icon: Users },
   { key: "contact", sectionId: "contact", Icon: Phone },
 ];
