@@ -11,9 +11,9 @@ const BLUR_PLACEHOLDER =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+PC9zdmc+";
 
 const IMAGES = [
-  { src: "/gallery/image1.jpg", alt: "Lobby main hall interior" },
-  { src: "/gallery/image2.jpg", alt: "Lounge seating area" },
-  { src: "/gallery/image3.jpg", alt: "Reception desk view" },
+  { src: "/gallery/image1.png", alt: "Image" },
+  { src: "/gallery/image2.png", alt: "Image" },
+  { src: "/gallery/image3.png", alt: "Image" },
 ];
 
 const GalleryCard = ({ src, alt }: { src: string; alt: string }) => (
