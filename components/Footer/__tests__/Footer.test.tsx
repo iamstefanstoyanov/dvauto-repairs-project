@@ -7,7 +7,7 @@ import Footer from "../Footer";
 describe("Footer", () => {
   it("renders the brand name", () => {
     renderWithProviders(<Footer />);
-    expect(screen.getByText("DVMI LTD")).toBeInTheDocument();
+    expect(screen.getByText("DV AUTO REPAIRS LTD")).toBeInTheDocument();
   });
 
   it("renders the phone contact link", () => {

@@ -14,7 +14,7 @@ vi.mock("@/hooks/useActiveSection", () => ({
 describe("Header", () => {
   it("renders the logo image", () => {
     renderWithProviders(<Header />);
-    expect(screen.getByAltText("DVMI LTD")).toBeInTheDocument();
+    expect(screen.getByAltText("DV AUTO REPAIRS LTD")).toBeInTheDocument();
   });
 
   it("renders desktop navigation links", () => {

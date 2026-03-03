@@ -35,7 +35,7 @@ const REVIEWS: Review[] = [
   {
     name: "Emily Richardson",
     rating: 5,
-    text: "I've been bringing both my cars here for over two years now and have never been disappointed. From simple oil changes to more complex diagnostics, they always deliver excellent results. The staff remembers your name, explains everything clearly, and never tries to upsell unnecessary work. It's rare to find a garage you can truly trust these days, but DVMI has earned my complete confidence. I've recommended them to all my friends and family and everyone has had the same positive experience.",
+    text: "I've been bringing both my cars here for over two years now and have never been disappointed. From simple oil changes to more complex diagnostics, they always deliver excellent results. The staff remembers your name, explains everything clearly, and never tries to upsell unnecessary work. It's rare to find a garage you can truly trust these days, but DV AUTO REPAIRS LTD has earned my complete confidence. I've recommended them to all my friends and family and everyone has had the same positive experience.",
   },
   {
     name: "Michael O'Brien",

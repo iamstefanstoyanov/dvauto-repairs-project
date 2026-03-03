@@ -1,9 +1,9 @@
 export const siteConfig = {
-  email: "info@dvmi.co.uk",
-  phone: "010-020-0340",
+  email: "test@dv-auto.co.uk",
+  phone: "000-000-0000",
   address: {
-    line1: "Unit 5, Riverside Industrial Estate",
-    line2: "London, SE1 2BB, UK",
+    line1: "Test 5, company address",
+    line2: "City, AA1 1BB, Country",
   },
   hours: "Mon – Fri: 09:00 – 18:00",
   socials: {

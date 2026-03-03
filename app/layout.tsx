@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "DVMI LTD | Car & Van Repairs, Tyres & Servicing",
-    template: "%s | DVMI LTD",
+    default: "DV AUTO REPAIRS LTD | Car & Van Repairs, Tyres & Servicing",
+    template: "%s | DV AUTO REPAIRS LTD",
   },
   description:
-    "DVMI LTD — professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more. Quality work at fair prices.",
+    "DV AUTO REPAIRS LTD — professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more. Quality work at fair prices.",
   keywords: [
     "car repair",
     "van repair",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "car servicing",
     "diagnostics",
     "garage",
-    "DVMI",
+    "DV AUTO REPAIRS LTD",
   ],
   icons: {
     icon: "/icon.svg",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "DVMI LTD",
-    title: "DVMI LTD | Car & Van Repairs, Tyres & Servicing",
+    siteName: "DV AUTO REPAIRS LTD",
+    title: "DV AUTO REPAIRS LTD | Car & Van Repairs, Tyres & Servicing",
     description:
       "Professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more.",
   },

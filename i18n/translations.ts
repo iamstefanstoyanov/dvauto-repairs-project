@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    brand: "DVMI LTD",
+    brand: "DV AUTO REPAIRS LTD",
     nav: {
       home: "Home",
       whatWeDo: "What We Do",
@@ -126,7 +126,7 @@ const translations = {
     },
   },
   bg: {
-    brand: "DVMI LTD",
+    brand: "DV AUTO REPAIRS LTD",
     nav: {
       home: "Начало",
       whatWeDo: "Какво правим",

@@ -2,15 +2,15 @@
 
 import {
   createContext,
-  useContext,
   useCallback,
+  useContext,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
 
 export type Language = "en" | "bg";
 
-const STORAGE_KEY = "dvmi-lang";
+const STORAGE_KEY = "dv-auto-repairs-ltd-lang";
 
 interface LanguageContextValue {
   language: Language;
