@@ -17,8 +17,9 @@ const SECTIONS: { id: string; Component: ComponentType }[] = [
 
 export default function Page() {
   return (
-    <main className="relative bg-[url('/garage-background.webp')] bg-cover bg-center bg-no-repeat bg-fixed md:bg-fixed">
-      <div className="pointer-events-none absolute inset-0 bg-white/75" />
+    <main className="relative">
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-[url('/garage-background.webp')] bg-cover bg-center bg-no-repeat" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-white/75" />
       <div className="relative">
         {SECTIONS.map(({ id, Component }) => (
           <Component key={id} />
