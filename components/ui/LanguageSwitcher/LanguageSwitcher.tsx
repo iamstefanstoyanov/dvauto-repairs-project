@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
         <ul
           role="listbox"
           aria-label="Language"
-          className="absolute right-0 top-full z-50 mt-1 min-w-full overflow-hidden rounded border border-gray-300 bg-white shadow-lg"
+          className="absolute right-0 top-full z-50 mt-1 min-w-full overflow-hidden rounded border border-gray-300 bg-gray-200 shadow-lg"
         >
           {OPTIONS.map(({ code, label, Flag }) => (
             <li key={code} role="option" aria-selected={language === code}>
@@ -56,7 +56,7 @@ const LanguageSwitcher = () => {
                 }}
                 className={cn(
                   "flex w-full items-center gap-2 px-3 py-2 text-sm font-medium transition-colors",
-                  language === code ? "bg-gray-400 text-white" : "text-gray-700 hover:bg-gray-100",
+                  language === code ? "bg-gray-400 text-white" : "text-gray-700 hover:bg-gray-300",
                 )}
               >
                 <Flag className="h-3.5 w-5" />
