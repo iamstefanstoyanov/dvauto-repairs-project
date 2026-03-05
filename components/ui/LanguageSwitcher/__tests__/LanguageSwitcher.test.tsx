@@ -4,24 +4,32 @@ import { describe, expect, it } from "vitest";
 import LanguageSwitcher from "../LanguageSwitcher";
 
 describe("LanguageSwitcher", () => {
-  it("renders the switch button", () => {
+  it("renders the trigger button showing the current language", () => {
     renderWithProviders(<LanguageSwitcher />);
-    expect(screen.getByRole("button", { name: /switch language/i })).toBeInTheDocument();
+    const trigger = screen.getByRole("button", { name: /select language/i });
+    expect(trigger).toBeInTheDocument();
+    expect(trigger).toHaveTextContent("EN");
   });
 
-  it("shows 'BG' when the current language is English", () => {
-    renderWithProviders(<LanguageSwitcher />);
-    expect(screen.getByRole("button")).toHaveTextContent("BG");
-  });
-
-  it("shows 'EN' after toggling to Bulgarian", async () => {
+  it("opens a dropdown with both language options on click", async () => {
     const { user } = renderWithProviders(<LanguageSwitcher />);
-    await user.click(screen.getByRole("button"));
-    expect(screen.getByRole("button")).toHaveTextContent("EN");
+    await user.click(screen.getByRole("button", { name: /select language/i }));
+    const listbox = screen.getByRole("listbox", { name: /language/i });
+    expect(listbox).toBeInTheDocument();
+    expect(screen.getAllByRole("option")).toHaveLength(2);
   });
 
-  it("has an accessible aria-label", () => {
-    renderWithProviders(<LanguageSwitcher />);
-    expect(screen.getByRole("button")).toHaveAttribute("aria-label", "Switch language");
+  it("switches to Bulgarian when selecting BG", async () => {
+    const { user } = renderWithProviders(<LanguageSwitcher />);
+    await user.click(screen.getByRole("button", { name: /select language/i }));
+    await user.click(screen.getByText("BG"));
+    expect(screen.getByRole("button", { name: /select language/i })).toHaveTextContent("BG");
+  });
+
+  it("closes the dropdown after selecting a language", async () => {
+    const { user } = renderWithProviders(<LanguageSwitcher />);
+    await user.click(screen.getByRole("button", { name: /select language/i }));
+    await user.click(screen.getByText("BG"));
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
   });
 });

@@ -39,6 +39,6 @@ describe("Header", () => {
 
   it("renders the language switcher", () => {
     renderWithProviders(<Header />);
-    expect(screen.getByLabelText("Switch language")).toBeInTheDocument();
+    expect(screen.getByLabelText("Select language")).toBeInTheDocument();
   });
 });
