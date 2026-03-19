@@ -4,7 +4,7 @@ A responsive single-page application built for a professional car and van repair
 
 ## Live Demo
 
-> **Still in development** — live URL coming soon.
+> https://dvauto-repairs.vercel.app/
 
 ## Features
 
