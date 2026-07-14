@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "DV AUTO REPAIRS LTD | Car & Van Repairs, Tyres & Servicing",
-    template: "%s | DV AUTO REPAIRS LTD",
+    default: "Company Name LTD | Car & Van Repairs, Tyres & Servicing",
+    template: "%s | Company Name LTD",
   },
   description:
-    "DV AUTO REPAIRS LTD — professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more. Quality work at fair prices.",
+    "Company Name LTD — professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more. Quality work at fair prices.",
   keywords: [
     "car repair",
     "van repair",
@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     "car servicing",
     "diagnostics",
     "garage",
-    "DV AUTO REPAIRS LTD",
+    "Company Name LTD",
   ],
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "DV AUTO REPAIRS LTD",
-    title: "DV AUTO REPAIRS LTD | Car & Van Repairs, Tyres & Servicing",
+    siteName: "Company Name LTD",
+    title: "Company Name LTD | Car & Van Repairs, Tyres & Servicing",
     description:
       "Professional car and van repair garage. Tyres, suspension, brakes, servicing, diagnostics and more.",
   },

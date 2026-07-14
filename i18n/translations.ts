@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    brand: "DV AUTO REPAIRS LTD",
+    brand: "Company Name LTD",
     nav: {
       home: "Home",
       whatWeDo: "What We Do",
@@ -127,7 +127,7 @@ const translations = {
     },
   },
   bg: {
-    brand: "DV AUTO REPAIRS LTD",
+    brand: "Company Name LTD",
     nav: {
       home: "Начало",
       whatWeDo: "Какво правим",
