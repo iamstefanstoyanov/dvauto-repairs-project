@@ -119,7 +119,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 pnpm build
 pnpm start
 ```
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
